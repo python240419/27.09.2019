@@ -51,3 +51,9 @@ print(p2)
 # sort this list by the length of each tuple:
 # result = [(1,), (2,3), (1,2,3), (1,2,3,4,5)]
 
+# Solution:
+l1 = [-4, -6, 0, 4, -2, 12, -200]
+print(list(filter(lambda x:x > 0, l1)))
+print(list(map(lambda x:x / 3, l1)))
+l2 = [(1,2,3), (2,3), (1,2,3,4,5), (1,)]
+print(sorted(l2, key=lambda x:len(x)))
