@@ -1,5 +1,5 @@
 from tkinter import *
-
+import time
 # place items on self (window)
 # IntVar
 # StringVar
@@ -23,10 +23,31 @@ class CalculatorWindow:
                                  textvariable=self.total_value,
                                  font=("david", 72))
         self.total_label.pack()
+
+        # IntVar / StringVar
+        self.time_value = StringVar()
+        self.time_value.set(time.ctime())
+        self.time_label = Label(root,
+                                 textvariable=self.time_value,
+                                 font=("david", 36))
+        self.time_label.pack()
+
         self.addBtn = Button(text="Add",
                              #command=self.add1)
                              command=lambda: self.total_value.set(self.total_value.get() + 1))
         self.addBtn.pack()
+
+        self.subBtn = Button(text="Sub",
+                             command=lambda: self.total_value.set(self.total_value.get() - 1))
+        self.subBtn.pack()
+
+        self.CBtn = Button(text="C",
+                             command=lambda: self.total_value.set(0))
+        self.CBtn.pack()
+
+        self.timeBtn = Button(text="time",
+                             command=lambda: self.time_value.set(time.ctime()))
+        self.timeBtn.pack()
     def add1(self):
         self.total_value.set(self.total_value.get() + 1)
 
