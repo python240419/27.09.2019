@@ -18,17 +18,17 @@ class CalculatorWindow:
                                  font=("david", 72))
         self.total_label.pack()
 
-        self.entry = Entry(root, text="0")
+        self.entry = Entry(root, text="0", font=("david", 72))
         self.entry.pack()
 
         # self.entry.get() -- returns the Entry text value
 
-        self.addBtn = Button(text="Add",
+        self.addBtn = Button(text="Add",font=("david", 72),
                              #command=self.add1)
                              command=lambda: self.total_value.set(self.total_value.get() + 1))
         self.addBtn.pack()
 
-        self.subBtn = Button(text="Sub",
+        self.subBtn = Button(text="Sub",font=("david", 72),
                              command=lambda: self.total_value.set(self.total_value.get() - 1))
         self.subBtn.pack()
 
@@ -36,11 +36,11 @@ class CalculatorWindow:
                              command=lambda: self.total_value.set(self.total_value.get() - 1))
         self.mulBtn.pack()
 
-        self.divBtn = Button(text="Div",
+        self.divBtn = Button(text="Div",font=("david", 72),
                              command=lambda: self.total_value.set(self.total_value.get() - 1))
         self.divBtn.pack()
 
-        self.CBtn = Button(text="C",
+        self.CBtn = Button(text="C",font=("david", 72),
                              command=lambda: self.total_value.set(0))
         self.CBtn.pack()
 
