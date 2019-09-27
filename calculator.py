@@ -23,24 +23,24 @@ class CalculatorWindow:
 
         # self.entry.get() -- returns the Entry text value
 
-        self.addBtn = Button(text="Add",font=("david", 72),
+        self.addBtn = Button(text="Add",font=("david", 36),
                              #command=self.add1)
                              command=lambda: self.total_value.set(self.total_value.get() + 1))
         self.addBtn.pack()
 
-        self.subBtn = Button(text="Sub",font=("david", 72),
+        self.subBtn = Button(text="Sub",font=("david", 36),
                              command=lambda: self.total_value.set(self.total_value.get() - 1))
         self.subBtn.pack()
 
-        self.mulBtn = Button(text="Mul",
+        self.mulBtn = Button(text="Mul",font=("david", 36),
                              command=lambda: self.total_value.set(self.total_value.get() - 1))
         self.mulBtn.pack()
 
-        self.divBtn = Button(text="Div",font=("david", 72),
+        self.divBtn = Button(text="Div",font=("david", 36),
                              command=lambda: self.total_value.set(self.total_value.get() - 1))
         self.divBtn.pack()
 
-        self.CBtn = Button(text="C",font=("david", 72),
+        self.CBtn = Button(text="C",font=("david", 36),
                              command=lambda: self.total_value.set(0))
         self.CBtn.pack()
 
