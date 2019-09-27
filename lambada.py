@@ -47,7 +47,7 @@ print(p2)
 #    get only positive numbers
 # 2. create map using lamda to
 #   get 1/3 of each number
-# [(1,2,3), (2,3), (1,2,3,4,5), (1)]
+# [(1,2,3), (2,3), (1,2,3,4,5), (1,)]
 # sort this list by the length of each tuple:
-# result = [(1), (2,3), (1,2,3), (1,2,3,4,5)]
+# result = [(1,), (2,3), (1,2,3), (1,2,3,4,5)]
 
