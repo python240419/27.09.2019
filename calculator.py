@@ -12,7 +12,7 @@ class CalculatorWindow:
         self.root= root
         root.title("Calculator")
         self.total_value = DoubleVar()
-        self.total_value.set(0)
+        self.total_value.set(0.0)
         self.total_label = Label(root,
                                  textvariable=self.total_value,
                                  font=("david", 72))
@@ -28,19 +28,19 @@ class CalculatorWindow:
 
         self.addBtn = Button(text="Add",font=("david", 36),
                              #command=self.add1)
-                             command=lambda: self.total_value.set(self.total_value.get() + 1))
+                             command=lambda: self.total_value.set(self.total_value.get() + self.entry_value.get()))
         self.addBtn.pack()
 
         self.subBtn = Button(text="Sub",font=("david", 36),
-                             command=lambda: self.total_value.set(self.total_value.get() - 1))
+                             command=lambda: self.total_value.set(self.total_value.get() - self.entry_value.get()))
         self.subBtn.pack()
 
         self.mulBtn = Button(text="Mul",font=("david", 36),
-                             command=lambda: self.total_value.set(self.total_value.get() - 1))
+                             command=lambda: self.total_value.set(self.total_value.get() * self.entry_value.get()))
         self.mulBtn.pack()
 
         self.divBtn = Button(text="Div",font=("david", 36),
-                             command=lambda: self.total_value.set(self.total_value.get() - 1))
+                             command=lambda: self.total_value.set(self.total_value.get() / self.entry_value.get()))
         self.divBtn.pack()
 
         self.CBtn = Button(text="C",font=("david", 36),
