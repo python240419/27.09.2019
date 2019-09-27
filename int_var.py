@@ -38,3 +38,5 @@ root.mainloop()  # blocking
 # add button which decrease 1
 # add button which sets the value back to 0
 # with lambda?
+# add string label with hello (StringVar)
+# add button which modifies the text of the label to the current datetime
