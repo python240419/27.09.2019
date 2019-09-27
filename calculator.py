@@ -18,7 +18,10 @@ class CalculatorWindow:
                                  font=("david", 72))
         self.total_label.pack()
 
-        self.entry = Entry(root, text="0", font=("david", 72))
+        self.entry_value = DoubleVar()
+        self.entry_value.set(0)
+        self.entry = Entry(root, font=("david", 72),
+                           textvariable=self.entry_value)
         self.entry.pack()
 
         # self.entry.get() -- returns the Entry text value
