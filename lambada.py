@@ -26,4 +26,26 @@ l1 = [1,2,3,4,5,6,7]
 print(list(map(mulby2, l1)))
 print(list(map(lambda x: x * 2, l1)))
 
+p = [ ("itay", 3), ("danny", 5), ("suzi", 1) ]
+p.sort() # default sort - first item
+print(p)
+
+def getSortingItem(item):
+    # item = ("itay", 3)
+    return item[1]
+    #item.split()[1]
+p = [ ("itay", 3), ("danny", 5), ("suzi", 1) ]
+p2 = ["itay hau", "benny cohen"]
+p.sort(key=getSortingItem) # [3, 5, 1] -- [1, 3, 5]
+p.sort(key=lambda item: item[1])
+p2.sort(key=lambda item:item.split()[1])
+print(p)
+print(p2)
+
+# [-4, -6, 0, 4, -2, 12, -200]
+# 1. create filter using lambda to
+#    get only positive numbers
+# 2. create map using lamda to
+#   get 1/3 of each number
+
 
