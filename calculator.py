@@ -11,7 +11,7 @@ class CalculatorWindow:
     def __init__(self, root):
         self.root= root
         root.title("Calculator")
-        self.total_value = IntVar()
+        self.total_value = DoubleVar()
         self.total_value.set(0)
         self.total_label = Label(root,
                                  textvariable=self.total_value,
