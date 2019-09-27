@@ -11,8 +11,8 @@ class CalculatorWindow:
     def __init__(self, root):
         self.root= root
         root.title("Calculator")
-        # like this will not be accessed
-        # after this method
+        # the next 2 lines syntax is not good since  this will not be accessed beyond this method
+        # (better to place this variables on self)
         #total_label = Label(root, text="hello")
         #total_label.pack()
         # ----------------------------
